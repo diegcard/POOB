@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Missionary
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ pe1\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Missionary()
+comment2.params=
+comment2.target=void\ initDraw()
+comment3.params=
+comment3.target=void\ makeVisible()
+comment4.params=newPosx\ newPosy
+comment4.target=void\ moteTo(int,\ int)
+comment5.params=
+comment5.target=int\ getxPosition()
+comment6.params=
+comment6.target=int\ getyPosition()
+numComments=7

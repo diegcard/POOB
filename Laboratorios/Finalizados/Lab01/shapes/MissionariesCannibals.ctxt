@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=MissionariesCannibals
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MissionariesCannibals\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=MissionariesCannibals()
+comment1.text=\r\n\ Metodo\ Constructor\r\n
+comment2.params=
+comment2.target=void\ makeVisible()
+comment3.params=
+comment3.target=void\ posicionesIniciales()
+comment4.params=
+comment4.target=boolean\ defeat()
+comment5.params=
+comment5.target=void\ insertarMissionary()
+comment5.text=\r\n\ Inserta\ un\ Missionero\ al\ bote\r\n
+comment6.params=
+comment6.target=void\ moverBote()
+comment6.text=\r\n\ Mueve\ el\ bote\ de\ una\ orilla\ a\ la\ otra\r\n
+comment7.params=
+comment7.target=void\ descargarMissionary()
+comment7.text=\r\n\ Descarga\ los\ missioneros\ en\ el\ bote\ a\ la\ orilla\ a\ la\ que\ se\ encuentre\ el\ bote\r\n
+numComments=8
