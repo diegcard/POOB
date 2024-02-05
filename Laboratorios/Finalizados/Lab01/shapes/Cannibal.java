@@ -1,27 +1,28 @@
 /**
- * La clase Missionary representa un objeto Missionary el cual es una representacion grafica de este personaje.
- * Los Misioneros tienen una representación gráfica con un cuerpo (rectángulo) y un nombre asociado.
+ * La clase Cannibal representa un objeto caníbal, el cual es una representacion grafica de este personaje.
+ * Los caníbales tienen una representación gráfica con un cuerpo (rectángulo) y un nombre asociado.
  * 
  * @author Diego Cardenas - Sebastian Cardona
  * @version 1.0.0
  */
-public class Missionary{
+public class Cannibal{
     private Rectangle body;
     public String name;
     
     /**
-     * Constructor Misionero
+     * Constructor del Cannibal 
      */
-    public Missionary(){
+    public Cannibal(){
         this.body = new Rectangle();
     }
     
     private void initDraw(){
         body.changeSize(60, 20);
+        body.changeColor("red");
     }
     
     /**
-     * Hace el Missionero visible 
+     * Hace el Cannibal visible 
      */
     public void makeVisible(){
         body.makeVisible();
@@ -48,7 +49,7 @@ public class Missionary{
     }
     
     /**
-     * Obtiene la posición vertical (eje y) actual del objeto en el plano.
+     * Obtiene la posición vertical (eje y) actual del objeto.
      *
      * @return La posición vertical actual del objeto.
      */
@@ -56,3 +57,4 @@ public class Missionary{
         return body.getyPosition();
     }
 }
+
