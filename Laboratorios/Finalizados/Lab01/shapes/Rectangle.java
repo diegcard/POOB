@@ -178,6 +178,13 @@ public class Rectangle{
         }
     }
 
+    /**
+     * Rotate 90 grades a triangle
+     */
+    public void rotate(){
+        this.changeSize(width,height);
+    }
+    
     /*
      * Erase the rectangle on screen.
      */
@@ -188,12 +195,39 @@ public class Rectangle{
         }
     }
     
+    /**
+     * Obtener posicion x del rectangulo
+     * @return xPosition
+     */
     public int getxPosition(){
         return xPosition;
     }
     
+    /**
+     * Obtener posicion y del rectangulo
+     * @return yPosition
+     */
     public int getyPosition(){
         return yPosition;
     }
+
+    /**
+     * Obtener el alto del cuadrado
+     * @return height
+     */
+    public int getHeight(){
+        return height;
+    }
+    
+    /**
+     * Obtener el ancho del cuadrado
+     * @return width
+     */
+    public int getWidth(){
+        return width;
+    }
+
 }
+
+
 

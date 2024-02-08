@@ -13,9 +13,12 @@ public class Boat{
     private Triangle ladoDerecho;
     private Rectangle palo;
     private Triangle velero;
-    public boolean pozIz = false;
-    public boolean posDe = false;
-    public String orilla;
+    private boolean posIz = false;
+    private boolean posDe = false;
+    private boolean posIzb = false;
+    private boolean posDeb = false;
+    private String orilla;
+    private int rotate;
     
     /**
      * Constructor por defecto de la clase Boat.
@@ -44,15 +47,15 @@ public class Boat{
         ladoIzquierdo.changeColor("white");
         ladoDerecho.moveVertical(50);
         ladoDerecho.changeSize(45, 60);
-        ladoDerecho.moveHorizontal(79);
+        ladoDerecho.moveHorizontal(80);
         ladoDerecho.changeColor("white");
         velero.changeSize(70, 50);
-        velero.moveHorizontal(10);
-        velero.moveVertical(-38);
+        velero.moveHorizontal(5);
+        velero.moveVertical(-40);
         velero.changeColor("red");  
         palo.changeSize(60, 20);
         palo.moveVertical(30);
-        palo.moveHorizontal(70);
+        palo.moveHorizontal(65);
         palo.changeColor("black");
     }
     
@@ -79,10 +82,82 @@ public class Boat{
     }
     
     /**
-     * Método que no realiza rotación ya que el bote es simétrico.
+     * Rotate 90 grades the boat
      */
     public void rotate(){
-        
+        base.rotate();
+        ladoIzquierdo.rotate();
+        ladoDerecho.rotate();
+        palo.rotate();
+        velero.rotate();
+        if(rotate < 3){
+            rotate ++;
+        }else{
+            rotate = 0;
+        }
+        reorganizar();
+    }
+    
+    /**
+     * Reorganizar el lado izquierdo y derecho del barco
+     */
+    private void reorganizarLadosBarco(){
+        if(rotate == 0){
+            ladoIzquierdo.moveVertical(base.getyPosition()-ladoIzquierdo.getyPosition());
+            ladoIzquierdo.moveHorizontal(base.getxPosition()-ladoIzquierdo.getxPosition());
+            ladoDerecho.moveVertical(base.getyPosition()-ladoDerecho.getyPosition());
+            ladoDerecho.moveHorizontal(base.getxPosition()+base.getWidth()-ladoDerecho.getxPosition());
+        } else if(rotate == 1){
+            ladoDerecho.moveVertical(base.getyPosition()+base.getHeight()-(ladoDerecho.getWidth()/2)-ladoDerecho.getyPosition());
+            ladoDerecho.moveHorizontal(base.getxPosition()-ladoDerecho.getxPosition());          
+            ladoIzquierdo.moveVertical(base.getyPosition()-(ladoIzquierdo.getWidth()/2)-ladoIzquierdo.getyPosition());
+            ladoIzquierdo.moveHorizontal(base.getxPosition()-ladoIzquierdo.getxPosition()); 
+        } else if(rotate == 2){
+            ladoDerecho.moveVertical(base.getyPosition()-ladoDerecho.getyPosition());
+            ladoDerecho.moveHorizontal(base.getxPosition()+base.getWidth()-ladoDerecho.getxPosition());
+            ladoIzquierdo.moveVertical(base.getyPosition()-ladoIzquierdo.getyPosition());
+            ladoIzquierdo.moveHorizontal(base.getxPosition()-ladoIzquierdo.getxPosition()); 
+        } else{
+            ladoDerecho.moveVertical(base.getyPosition()+base.getHeight()-(ladoDerecho.getWidth()/2)-ladoDerecho.getyPosition());
+            ladoDerecho.moveHorizontal(base.getxPosition()+base.getWidth()-ladoDerecho.getxPosition());       
+            ladoIzquierdo.moveVertical(base.getyPosition()-(ladoIzquierdo.getWidth()/2)-ladoIzquierdo.getyPosition());
+            ladoIzquierdo.moveHorizontal(base.getxPosition()+base.getWidth()-ladoIzquierdo.getxPosition()); 
+        }
+    }
+    
+    /**
+     * Reorganiza el palo y velero de un barco
+     */
+    private void reorganizaPaloVeleroDeBarco(){
+        if(rotate == 0){
+            palo.moveHorizontal(((base.getWidth()/2)+base.getxPosition()-(palo.getWidth()/2)-palo.getxPosition()));
+            palo.moveVertical((base.getyPosition()+base.getHeight()-palo.getHeight()-palo.getyPosition()));
+            velero.moveHorizontal(base.getxPosition()+(base.getWidth()/2)-velero.getxPosition());
+            velero.moveVertical(palo.getyPosition()-velero.getHeight()-velero.getyPosition()); 
+        } else if(rotate == 1){
+            palo.moveHorizontal(base.getxPosition()-palo.getxPosition());
+            palo.moveVertical((base.getyPosition()+(base.getHeight()/2)-(palo.getHeight()/2)-palo.getyPosition()));
+            velero.moveVertical(base.getyPosition()+(base.getHeight()/2)-(velero.getWidth()/2)-velero.getyPosition());
+            velero.moveHorizontal(palo.getxPosition()+palo.getWidth()-velero.getxPosition());
+        } else if(rotate == 2){
+            palo.moveHorizontal(base.getxPosition()+(base.getWidth()/2)-(palo.getWidth()/2)-palo.getxPosition());
+            palo.moveVertical((base.getyPosition()-palo.getyPosition()));
+            velero.moveVertical(palo.getyPosition()+palo.getHeight()-velero.getyPosition());
+            velero.moveHorizontal(base.getxPosition()+(base.getWidth()/2)-velero.getxPosition());
+        } else{
+            palo.moveHorizontal(base.getxPosition()-base.getWidth()-palo.getxPosition());
+            palo.moveVertical((base.getyPosition()+(base.getHeight()/2)-(palo.getHeight()/2)-palo.getyPosition()));
+            velero.moveVertical(base.getyPosition()+(base.getHeight()/2)-(velero.getWidth()/2)-velero.getyPosition());
+            velero.moveHorizontal(palo.getxPosition()-velero.getxPosition());
+        }
+    }
+    
+    /**
+     * Reorganiza todos los elementos del barco
+     */
+    private void reorganizar(){
+        reorganizarLadosBarco();
+        reorganizaPaloVeleroDeBarco();
     }
     
     /**
@@ -110,17 +185,25 @@ public class Boat{
      * @param newSize El nuevo tamaño del bote.
      */
     public void changeSize(int newSize){
-        //base.changeSize(_newHeight_, _newWidth_)
+        base.changeSize((int)(base.getHeight() + base.getHeight()*((float)newSize/100)),(int)(base.getWidth() + base.getWidth()*((float)newSize/100)));
+        ladoDerecho.changeSize((int)(ladoDerecho.getHeight() + ladoDerecho.getHeight()*((float)newSize/100)), (int)(ladoDerecho.getWidth() + ladoDerecho.getWidth()*((float)newSize/100)));
+        ladoIzquierdo.changeSize((int)(ladoIzquierdo.getHeight() + ladoIzquierdo.getHeight()*((float)newSize/100)),(int)(ladoIzquierdo.getWidth() + ladoIzquierdo.getWidth()*((float)newSize/100)));
+        palo.changeSize((int)(palo.getHeight() + palo.getHeight()*((float)newSize/100)),(int)(palo.getWidth() + palo.getWidth()*((float)newSize/100)));
+        velero.changeSize((int)(velero.getHeight() + velero.getHeight()*((float)newSize/100)),(int)(velero.getWidth() + velero.getWidth()*((float)newSize/100)));
+        reorganizar();
     }
     
     /**
      * Cambia el color del bote y de sus partes.
      *
-     * @param newColor El nuevo color del bote.
+     * @param newColorPalo El nuevo color del palo del bote
+     * @param newColorBase para el nuevo color de la base del bote
+     * @param newColorVelero para el nuevo color del velero del bote
      */
-    public void changeColor(String newColor){
-        base.changeColor(newColor);
-        palo.changeColor(newColor);
+    public void changeColor(String newColorPalo, String newColorBase, String newColorVelero){
+        base.changeColor(newColorBase);
+        palo.changeColor(newColorPalo);
+        velero.changeColor(newColorVelero);
         ladoDerecho.changeColor("white");
         ladoIzquierdo.changeColor("white");
         
@@ -142,5 +225,95 @@ public class Boat{
      */
     public int getyPosition(){
         return base.getyPosition();
+    }
+    
+    /**
+     * Obtiene el nombre de la orilla actual del bote.
+     * 
+     * @return El nombre de la orilla actual del bote ("Izquierda" o "Derecha").
+     */
+    public String getOrilla(){
+        return orilla;
+    }
+    
+    /**
+     * Establece el nombre de la orilla actual del bote.
+     * 
+     * @param orilla El nombre de la orilla a establecer ("Izquierda" o "Derecha").
+     */
+    public void setOrilla(String orilla){
+        this.orilla = orilla;
+    }
+    
+    /**
+     * Obtiene el estado de la posición del bote en la orilla izquierda.
+     * 
+     * @return true si el bote está en la orilla izquierda, false en caso contrario.
+     */
+    public boolean getPosIz(){
+        return posIz;
+    }
+    
+    /**
+     * Establece el estado de la posición del bote en la orilla izquierda.
+     * 
+     * @param posIz true si el bote está en la orilla izquierda, false si no.
+     */
+    public void setPosIz(boolean posIz){
+        this.posIz = posIz;
+    }
+    
+    /**
+     * Obtiene el estado de la posición del bote en la orilla derecha.
+     * 
+     * @return true si el bote está en la orilla derecha, false en caso contrario.
+     */
+    public boolean getPosDe(){
+        return posDe;
+    }
+    
+    /**
+     * Establece el estado de la posición del bote en la orilla derecha.
+     * 
+     * @param posDe true si el bote está en la orilla derecha, false si no.
+     */
+    public void setPosDe(boolean posDe){
+        this.posDe = posDe;
+    }
+    
+    /**
+     * Obtiene el estado de la posición del bote en la orilla izquierda, para los caníbales.
+     * 
+     * @return true si el bote está en la orilla izquierda, false en caso contrario.
+     */
+    public boolean getPosIzb(){
+        return posIzb;
+    }
+    
+    /**
+     * Establece el estado de la posición del bote en la orilla izquierda, para los caníbales.
+     * 
+     * @param posIzb true si el bote está en la orilla izquierda para los caníbales, false si no.
+     */
+    public void setPosIzb(boolean posIzb){
+        this.posIzb = posIzb;
+    }
+    
+    /**
+     * Obtiene el estado de la posición del bote en la orilla derecha, para los caníbales.
+     * 
+     * @return true si el bote está en la orilla derecha, false en caso contrario.
+     */
+    public boolean getPosDeb(){
+        return posDeb;
+    }
+    
+    /**
+     * Establece el estado de la posición del bote en la orilla derecha, para los caníbales.
+     * 
+     * @param posDeb true si el bote está en la orilla derecha para los caníbales, false si no.
+     */
+    public void setposDeb(boolean posDeb){
+        this.posDeb = posDeb;
     }
 }

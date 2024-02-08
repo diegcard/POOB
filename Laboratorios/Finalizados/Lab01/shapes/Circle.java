@@ -34,7 +34,19 @@ public class Circle{
         color = "black";
         isVisible = false;
     }    
-       
+    
+    public int getxPosition(){
+        return xPosition;
+    }
+    
+    public int getyPosition(){
+        return yPosition;
+    }
+    
+    public int getDiameter(){
+        return diameter;
+    }
+    
     public void makeVisible(){
         isVisible = true;
         draw();
