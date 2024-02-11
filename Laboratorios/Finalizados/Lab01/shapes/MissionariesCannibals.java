@@ -21,11 +21,18 @@ public class MissionariesCannibals{
     private ArrayList<Cannibal> borde1b = new ArrayList<Cannibal>();
     private ArrayList<Cannibal> borde2b = new ArrayList<Cannibal>();
     private ArrayList<Cannibal> boteEnMomentob = new ArrayList<Cannibal>();
+    private ArrayList<String> pasos = new ArrayList<String>();
+    private Rectangle piso1;
+    private Rectangle piso2;
+    private Rectangle rio;
     
     /**
      * Metodo Constructor.
      */
     public MissionariesCannibals(){
+        this.piso1 = new Rectangle();
+        this.piso2 = new Rectangle();
+        this.rio = new Rectangle();
         this.bote = new Boat();
         this.Misionero1 = new Missionary();
         this.Misionero2 = new Missionary();
@@ -47,6 +54,9 @@ public class MissionariesCannibals{
      * Hace visible todos los objetos de MissionariesCannibals.
      */
     private void makeVisible(){
+        piso1.makeVisible();
+        piso2.makeVisible();
+        rio.makeVisible();
         bote.makeVisible();
         Misionero1.makeVisible();
         Misionero2.makeVisible();
@@ -60,16 +70,33 @@ public class MissionariesCannibals{
      * Metodo que da las posiciones iniciales de cada uno de los objetos de MissionariesCannibals.
      */
     private void posicionesIniciales(){
+        posicionesPaisaje();
         posicionesInicialesBoat();
         posicionesInicialesMissionary();
         posicionesInicialesCannibal();
     }
     
     /**
+     * Metodo para pintar el paisaje que son las dos orillas y el rio
+     */
+    private void posicionesPaisaje(){
+        piso1.changeColor("green");
+        piso2.changeColor("green");
+        rio.changeColor("blue");
+        piso1.changeSize(800,175);
+        piso1.moveHorizontal(-66);
+        piso2.changeSize(800,230);
+        piso2.moveHorizontal(1000);
+        rio.moveHorizontal(piso1.getxPosition()+piso1.getWidth()-rio.getxPosition());
+        rio.changeSize(800,900);
+    }
+    
+    /**
      * Metodo da la poscion inicial del boat.
      */
     private void posicionesInicialesBoat(){
-        bote.moteTo(60, 250);
+        bote.changeColor("black", "black", "red", "blue");
+        bote.moteTo(160, 250);
         bote.changeSize(70);
         bote.setOrilla("Izquierda");
     }
@@ -80,9 +107,8 @@ public class MissionariesCannibals{
     private void posicionesInicialesMissionary(){
         int posInicialY = 20;
         for(Missionary misioneros: borde1){
-            misioneros.moveTo(0, posInicialY);
-            posInicialY+=70;
-            misioneros.name = "Misionero";
+            misioneros.moveTo(20-misioneros.getxPosition(), posInicialY);
+            posInicialY+=145;
         }
     }
     
@@ -90,11 +116,10 @@ public class MissionariesCannibals{
      * Metodo mueve a las posiciones iniciales de los canibales.
     */
     private void posicionesInicialesCannibal(){
-        int posInicialY = 290;
+        int posInicialY = 20;
         for(Cannibal canibales: borde1b){
-            canibales.moveTo(0, posInicialY);
-            posInicialY+=70;
-            canibales.name = "Canibal";
+            canibales.moveTo(100-canibales.getxPosition(), posInicialY);
+            posInicialY+=145;
         }
     }
     
@@ -149,6 +174,7 @@ public class MissionariesCannibals{
         } else if (bote.getOrilla().equals("Derecha")) {
             insertarMissionaryEnOrilla(borde2);
         }
+        pasos.add("IM");
     }
     
     /**
@@ -209,6 +235,7 @@ public class MissionariesCannibals{
         } else if (bote.getOrilla().equals("Derecha")) {
             insertarCannibalEnOrilla(borde2b);
         }
+        pasos.add("IC");
     }
     
     /**
@@ -265,13 +292,14 @@ public class MissionariesCannibals{
         }else if(verificarCantidadMisionerosCannibalsoOrillas()){
             JOptionPane.showMessageDialog(null, "Los misioneros Perdieron");
         }else{
-            int cantidadMover = 600;
+            int cantidadMover = 500;
             if(bote.getOrilla().equals("Izquierda")){
                 moverBoteIzquierda(cantidadMover);
             }else{
                 moverBoteDerecha(-cantidadMover);
             }
         }
+        pasos.add("MB");
     }
 
     /**
@@ -326,6 +354,7 @@ public class MissionariesCannibals{
                 descargarMissionaryDerecha();  
             }
         }
+        pasos.add("DM");
     }
     
     /**
@@ -336,15 +365,14 @@ public class MissionariesCannibals{
      * Finalmente, actualiza el estado del bote si corresponde y elimina el misionero de la lista de misioneros en el bote.
      */
     private void descargarMissionaryIzquierda(){
-        int totaly = 0;
-        for (Missionary misioneros: borde1){
-            if(misioneros.name.equals("Misionero")){
-                totaly+=70;
-            }
-        }
         Missionary aDescargar = boteEnMomento.get(0);
-        aDescargar.moveTo(bote.getxPosition() - aDescargar.getxPosition() - 60, -totaly);
-        borde1.add(aDescargar);
+        if(borde1.size() > 0){
+            aDescargar.moveTo(20-aDescargar.getxPosition(),borde1.get(0).getyPosition()-145-aDescargar.getyPosition());
+        }else{
+            aDescargar.moveTo(20-aDescargar.getxPosition(),bote.getyPosition()+160-aDescargar.getyPosition());
+        }
+        
+        borde1.add(0,aDescargar);
         if(bote.getPosIz() && !bote.getPosIzb()){
             bote.setPosIz(false);
         }else if(bote.getPosDe() && !bote.getPosDeb()){
@@ -361,21 +389,20 @@ public class MissionariesCannibals{
      * Finalmente, actualiza el estado del bote si corresponde y elimina el misionero de la lista de misioneros en el bote.
      */
     private void descargarMissionaryDerecha(){
-        int totaly = 10;
-        for (Missionary misioneros: borde2){
-            if(misioneros.name.equals("Misionero")){
-                totaly+=70;
-            }
-        }
         Missionary aDescargar = boteEnMomento.get(0);
-        aDescargar.moveTo(bote.getxPosition() - aDescargar.getxPosition() + 390, -totaly);
-        borde2.add(aDescargar);
+        if(borde2.size() > 0){
+            aDescargar.moveTo(bote.getxPosition()+450 - aDescargar.getxPosition(),borde2.get(0).getyPosition()-145-aDescargar.getyPosition());
+        }else{
+            aDescargar.moveTo(bote.getxPosition()+450 - aDescargar.getxPosition(),bote.getyPosition()+160-aDescargar.getyPosition());
+        }
+        borde2.add(0,aDescargar);
         if(bote.getPosIz() && !bote.getPosIzb()){
             bote.setPosIz(false);
         }else if(bote.getPosDe() && !bote.getPosDeb()){
             bote.setPosDe(false);
         }
         boteEnMomento.remove(0);
+        verificarSiMisionerosGanan();
     }
     
     /**
@@ -392,6 +419,7 @@ public class MissionariesCannibals{
                 descargarCannibalDerecha();  
             }
         }
+        pasos.add("DC");
     }
     
     /**
@@ -402,15 +430,14 @@ public class MissionariesCannibals{
      * Finalmente, actualiza el estado del bote si corresponde y elimina el caníbal de la lista de caníbales en el bote.
      */
     private void descargarCannibalIzquierda(){
-        int totaly = 50;
-        for (Cannibal canibales: borde1b){
-            if(canibales.name.equals("Canibal")){
-                totaly+=70;
-            }
-        }
         Cannibal aDescargar = boteEnMomentob.get(0);
-        aDescargar.moveTo(bote.getxPosition() - aDescargar.getxPosition() - 60, totaly);
-        borde1b.add(aDescargar);
+        if(borde1b.size() > 0){
+            aDescargar.moveTo(100-aDescargar.getxPosition(),borde1b.get(0).getyPosition()-145-aDescargar.getyPosition());
+        }else{
+            aDescargar.moveTo(100-aDescargar.getxPosition(),bote.getyPosition()+160-aDescargar.getyPosition());
+        }
+        
+        borde1b.add(0,aDescargar);
         if(bote.getPosIzb() && !bote.getPosIz()){
             bote.setPosIzb(false);
         }else if(bote.getPosDeb() && !bote.getPosDe()){
@@ -427,15 +454,14 @@ public class MissionariesCannibals{
      * Finalmente, actualiza el estado del bote si corresponde y elimina el caníbal de la lista de caníbales en el bote.
      */
     private void descargarCannibalDerecha(){
-        int totaly = 100;
-        for (Cannibal canibales: borde2b){
-            if(canibales.name.equals("Canibal")){
-                totaly+=70;
-            }
-        }
         Cannibal aDescargar = boteEnMomentob.get(0);
-        aDescargar.moveTo(bote.getxPosition() - aDescargar.getxPosition() + 390, totaly);
-        borde2b.add(aDescargar);
+        if(borde2b.size() > 0){
+            aDescargar.moveTo(bote.getxPosition()+370 - aDescargar.getxPosition(),borde2b.get(0).getyPosition()-145-aDescargar.getyPosition());
+        }else{
+            aDescargar.moveTo(bote.getxPosition()+370 - aDescargar.getxPosition(),bote.getyPosition()+160-aDescargar.getyPosition());
+        }
+ 
+        borde2b.add(0,aDescargar);
         if(bote.getPosIzb() && !bote.getPosIz()){
             bote.setPosIzb(false);
         }else if(bote.getPosDeb() && !bote.getPosDe()){
@@ -454,6 +480,35 @@ public class MissionariesCannibals{
         if(borde2.size() == 3){
             JOptionPane.showMessageDialog(null, "Los misioneros ganaron");
         }
+    }
+    
+    /**
+     * Retrocede el ultimo movimiento que se hizo
+     */
+    public void controlz(){
+        String ultimoMov = pasos.get(pasos.size()-1);
+        switch(ultimoMov){
+            case "IM":
+                descargarMissionary();
+                pasos.remove(pasos.size()-1);
+                break;
+            case "IC":
+                descargarCannibal();
+                pasos.remove(pasos.size()-1);
+                break;
+            case "MB":
+                moverBote();
+                pasos.remove(pasos.size()-1);
+                break;
+            case "DC":
+                insertarCannibal();
+                pasos.remove(pasos.size()-1);
+                break;
+            default:
+                insertarMissionary();
+                pasos.remove(pasos.size()-1);
+        }
+        pasos.remove(pasos.size()-1);
     }
     
 }

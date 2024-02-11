@@ -102,26 +102,30 @@ public class Boat{
      * Reorganizar el lado izquierdo y derecho del barco
      */
     private void reorganizarLadosBarco(){
-        if(rotate == 0){
-            ladoIzquierdo.moveVertical(base.getyPosition()-ladoIzquierdo.getyPosition());
-            ladoIzquierdo.moveHorizontal(base.getxPosition()-ladoIzquierdo.getxPosition());
-            ladoDerecho.moveVertical(base.getyPosition()-ladoDerecho.getyPosition());
-            ladoDerecho.moveHorizontal(base.getxPosition()+base.getWidth()-ladoDerecho.getxPosition());
-        } else if(rotate == 1){
-            ladoDerecho.moveVertical(base.getyPosition()+base.getHeight()-(ladoDerecho.getWidth()/2)-ladoDerecho.getyPosition());
-            ladoDerecho.moveHorizontal(base.getxPosition()-ladoDerecho.getxPosition());          
-            ladoIzquierdo.moveVertical(base.getyPosition()-(ladoIzquierdo.getWidth()/2)-ladoIzquierdo.getyPosition());
-            ladoIzquierdo.moveHorizontal(base.getxPosition()-ladoIzquierdo.getxPosition()); 
-        } else if(rotate == 2){
-            ladoDerecho.moveVertical(base.getyPosition()-ladoDerecho.getyPosition());
-            ladoDerecho.moveHorizontal(base.getxPosition()+base.getWidth()-ladoDerecho.getxPosition());
-            ladoIzquierdo.moveVertical(base.getyPosition()-ladoIzquierdo.getyPosition());
-            ladoIzquierdo.moveHorizontal(base.getxPosition()-ladoIzquierdo.getxPosition()); 
-        } else{
-            ladoDerecho.moveVertical(base.getyPosition()+base.getHeight()-(ladoDerecho.getWidth()/2)-ladoDerecho.getyPosition());
-            ladoDerecho.moveHorizontal(base.getxPosition()+base.getWidth()-ladoDerecho.getxPosition());       
-            ladoIzquierdo.moveVertical(base.getyPosition()-(ladoIzquierdo.getWidth()/2)-ladoIzquierdo.getyPosition());
-            ladoIzquierdo.moveHorizontal(base.getxPosition()+base.getWidth()-ladoIzquierdo.getxPosition()); 
+        switch(rotate){
+            case 0:
+                ladoIzquierdo.moveVertical(base.getyPosition()-ladoIzquierdo.getyPosition());
+                ladoIzquierdo.moveHorizontal(base.getxPosition()-ladoIzquierdo.getxPosition());
+                ladoDerecho.moveVertical(base.getyPosition()-ladoDerecho.getyPosition());
+                ladoDerecho.moveHorizontal(base.getxPosition()+base.getWidth()-ladoDerecho.getxPosition());
+                break;
+            case 1:
+                ladoDerecho.moveVertical(base.getyPosition()+base.getHeight()-(ladoDerecho.getWidth()/2)-ladoDerecho.getyPosition());
+                ladoDerecho.moveHorizontal(base.getxPosition()-ladoDerecho.getxPosition());          
+                ladoIzquierdo.moveVertical(base.getyPosition()-(ladoIzquierdo.getWidth()/2)-ladoIzquierdo.getyPosition());
+                ladoIzquierdo.moveHorizontal(base.getxPosition()-ladoIzquierdo.getxPosition()); 
+                break;
+            case 2:
+                ladoDerecho.moveVertical(base.getyPosition()-ladoDerecho.getyPosition());
+                ladoDerecho.moveHorizontal(base.getxPosition()+base.getWidth()-ladoDerecho.getxPosition());
+                ladoIzquierdo.moveVertical(base.getyPosition()-ladoIzquierdo.getyPosition());
+                ladoIzquierdo.moveHorizontal(base.getxPosition()-ladoIzquierdo.getxPosition()); 
+                break;
+            default:
+                ladoDerecho.moveVertical(base.getyPosition()+base.getHeight()-(ladoDerecho.getWidth()/2)-ladoDerecho.getyPosition());
+                ladoDerecho.moveHorizontal(base.getxPosition()+base.getWidth()-ladoDerecho.getxPosition());       
+                ladoIzquierdo.moveVertical(base.getyPosition()-(ladoIzquierdo.getWidth()/2)-ladoIzquierdo.getyPosition());
+                ladoIzquierdo.moveHorizontal(base.getxPosition()+base.getWidth()-ladoIzquierdo.getxPosition()); 
         }
     }
     
@@ -129,26 +133,30 @@ public class Boat{
      * Reorganiza el palo y velero de un barco
      */
     private void reorganizaPaloVeleroDeBarco(){
-        if(rotate == 0){
-            palo.moveHorizontal(((base.getWidth()/2)+base.getxPosition()-(palo.getWidth()/2)-palo.getxPosition()));
-            palo.moveVertical((base.getyPosition()+base.getHeight()-palo.getHeight()-palo.getyPosition()));
-            velero.moveHorizontal(base.getxPosition()+(base.getWidth()/2)-velero.getxPosition());
-            velero.moveVertical(palo.getyPosition()-velero.getHeight()-velero.getyPosition()); 
-        } else if(rotate == 1){
-            palo.moveHorizontal(base.getxPosition()-palo.getxPosition());
-            palo.moveVertical((base.getyPosition()+(base.getHeight()/2)-(palo.getHeight()/2)-palo.getyPosition()));
-            velero.moveVertical(base.getyPosition()+(base.getHeight()/2)-(velero.getWidth()/2)-velero.getyPosition());
-            velero.moveHorizontal(palo.getxPosition()+palo.getWidth()-velero.getxPosition());
-        } else if(rotate == 2){
-            palo.moveHorizontal(base.getxPosition()+(base.getWidth()/2)-(palo.getWidth()/2)-palo.getxPosition());
-            palo.moveVertical((base.getyPosition()-palo.getyPosition()));
-            velero.moveVertical(palo.getyPosition()+palo.getHeight()-velero.getyPosition());
-            velero.moveHorizontal(base.getxPosition()+(base.getWidth()/2)-velero.getxPosition());
-        } else{
-            palo.moveHorizontal(base.getxPosition()-base.getWidth()-palo.getxPosition());
-            palo.moveVertical((base.getyPosition()+(base.getHeight()/2)-(palo.getHeight()/2)-palo.getyPosition()));
-            velero.moveVertical(base.getyPosition()+(base.getHeight()/2)-(velero.getWidth()/2)-velero.getyPosition());
-            velero.moveHorizontal(palo.getxPosition()-velero.getxPosition());
+        switch(rotate){
+            case 0:
+                palo.moveHorizontal(((base.getWidth()/2)+base.getxPosition()-(palo.getWidth()/2)-palo.getxPosition()));
+                palo.moveVertical((base.getyPosition()+base.getHeight()-palo.getHeight()-palo.getyPosition()));
+                velero.moveHorizontal(base.getxPosition()+(base.getWidth()/2)-velero.getxPosition());
+                velero.moveVertical(palo.getyPosition()-velero.getHeight()-velero.getyPosition()); 
+                break;
+            case 1:
+                palo.moveHorizontal(base.getxPosition()-palo.getxPosition());
+                palo.moveVertical((base.getyPosition()+(base.getHeight()/2)-(palo.getHeight()/2)-palo.getyPosition()));
+                velero.moveVertical(base.getyPosition()+(base.getHeight()/2)-(velero.getWidth()/2)-velero.getyPosition());
+                velero.moveHorizontal(palo.getxPosition()+palo.getWidth()-velero.getxPosition());
+                break;
+            case 2:
+                palo.moveHorizontal(base.getxPosition()+(base.getWidth()/2)-(palo.getWidth()/2)-palo.getxPosition());
+                palo.moveVertical((base.getyPosition()-palo.getyPosition()));
+                velero.moveVertical(palo.getyPosition()+palo.getHeight()-velero.getyPosition());
+                velero.moveHorizontal(base.getxPosition()+(base.getWidth()/2)-velero.getxPosition()); 
+                break;
+            default:
+                palo.moveHorizontal(base.getxPosition()-base.getWidth()-palo.getxPosition());
+                palo.moveVertical((base.getyPosition()+(base.getHeight()/2)-(palo.getHeight()/2)-palo.getyPosition()));
+                velero.moveVertical(base.getyPosition()+(base.getHeight()/2)-(velero.getWidth()/2)-velero.getyPosition());
+                velero.moveHorizontal(palo.getxPosition()-velero.getxPosition());
         }
     }
     
@@ -199,13 +207,14 @@ public class Boat{
      * @param newColorPalo El nuevo color del palo del bote
      * @param newColorBase para el nuevo color de la base del bote
      * @param newColorVelero para el nuevo color del velero del bote
+     * @param newColorLados para el color de los lados invisibles del bote
      */
-    public void changeColor(String newColorPalo, String newColorBase, String newColorVelero){
+    public void changeColor(String newColorPalo, String newColorBase, String newColorVelero, String newColorLados){
         base.changeColor(newColorBase);
         palo.changeColor(newColorPalo);
         velero.changeColor(newColorVelero);
-        ladoDerecho.changeColor("white");
-        ladoIzquierdo.changeColor("white");
+        ladoDerecho.changeColor(newColorLados);
+        ladoIzquierdo.changeColor(newColorLados);
         
     }
     
@@ -241,8 +250,8 @@ public class Boat{
      * 
      * @param orilla El nombre de la orilla a establecer ("Izquierda" o "Derecha").
      */
-    public void setOrilla(String orilla){
-        this.orilla = orilla;
+        public void setOrilla(String orilla){
+            this.orilla = orilla;
     }
     
     /**

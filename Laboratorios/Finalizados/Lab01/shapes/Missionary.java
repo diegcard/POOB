@@ -15,7 +15,6 @@ public class Missionary{
     private Rectangle armI;
     private Rectangle leg;
     private int rotacion;
-    public String name;
     
     /**
      * Constructor Misionero
@@ -183,26 +182,30 @@ public class Missionary{
      * reorganizar el brazo izquierdo y derecho del misionero
      */
     private void reorganizarBrazos(){
-        if(rotacion == 0){
-            armD.moveHorizontal(body.getxPosition()+body.getWidth()-armD.getxPosition());
-            armD.moveVertical(body.getyPosition()-armD.getyPosition());
-            armI.moveHorizontal(body.getxPosition()-armI.getWidth()-armI.getxPosition());
-            armI.moveVertical(body.getyPosition()-armI.getyPosition());
-        }else if(rotacion == 1){
-            armD.moveHorizontal(body.getxPosition()+body.getWidth()-armD.getWidth()-armD.getxPosition());
-            armD.moveVertical(body.getyPosition()+body.getHeight()-armD.getyPosition());
-            armI.moveHorizontal(body.getxPosition()+body.getWidth()-armI.getWidth()-armI.getxPosition());
-            armI.moveVertical(body.getyPosition()-armI.getHeight()-armI.getyPosition());
-        }else if(rotacion == 2){
-            armD.moveHorizontal(body.getxPosition()+body.getWidth()-armD.getxPosition());
-            armD.moveVertical(body.getyPosition()+body.getHeight()-armD.getHeight()-armD.getyPosition());
-            armI.moveHorizontal(body.getxPosition()-armI.getWidth()-armI.getxPosition());
-            armI.moveVertical(body.getyPosition()+body.getHeight()-armI.getHeight()-armI.getyPosition());
-        }else{
-            armD.moveHorizontal(body.getxPosition()-armD.getxPosition());
-            armD.moveVertical(body.getyPosition()-armD.getHeight()-armD.getyPosition());
-            armI.moveHorizontal(body.getxPosition()-armI.getxPosition());
-            armI.moveVertical(body.getyPosition()+body.getHeight()-armI.getyPosition());
+        switch(rotacion){
+            case 0:
+                armD.moveHorizontal(body.getxPosition()+body.getWidth()-armD.getxPosition());
+                armD.moveVertical(body.getyPosition()-armD.getyPosition());
+                armI.moveHorizontal(body.getxPosition()-armI.getWidth()-armI.getxPosition());
+                armI.moveVertical(body.getyPosition()-armI.getyPosition());
+                break;
+            case 1:
+                armD.moveHorizontal(body.getxPosition()+body.getWidth()-armD.getWidth()-armD.getxPosition());
+                armD.moveVertical(body.getyPosition()+body.getHeight()-armD.getyPosition());
+                armI.moveHorizontal(body.getxPosition()+body.getWidth()-armI.getWidth()-armI.getxPosition());
+                armI.moveVertical(body.getyPosition()-armI.getHeight()-armI.getyPosition());
+                break;
+            case 2:
+                armD.moveHorizontal(body.getxPosition()+body.getWidth()-armD.getxPosition());
+                armD.moveVertical(body.getyPosition()+body.getHeight()-armD.getHeight()-armD.getyPosition());
+                armI.moveHorizontal(body.getxPosition()-armI.getWidth()-armI.getxPosition());
+                armI.moveVertical(body.getyPosition()+body.getHeight()-armI.getHeight()-armI.getyPosition());
+                break;
+            default:
+                armD.moveHorizontal(body.getxPosition()-armD.getxPosition());
+                armD.moveVertical(body.getyPosition()-armD.getHeight()-armD.getyPosition());
+                armI.moveHorizontal(body.getxPosition()-armI.getxPosition());
+                armI.moveVertical(body.getyPosition()+body.getHeight()-armI.getyPosition());
         }
     }
     
@@ -210,18 +213,22 @@ public class Missionary{
      * reorganizar cabeza del misionero
      */
     private void reorganizarCabeza(){
-        if(rotacion == 0){
-            head.moveHorizontal(body.getxPosition()-head.getxPosition());
-            head.moveVertical(body.getyPosition()-head.getDiameter()-head.getyPosition());
-        }else if(rotacion == 1){
-            head.moveHorizontal(body.getxPosition()+body.getWidth()-head.getxPosition());
-            head.moveVertical(body.getyPosition()-head.getyPosition());
-        }else if(rotacion == 2){
-            head.moveHorizontal(body.getxPosition()-head.getxPosition());
-            head.moveVertical(body.getyPosition()+body.getHeight()-head.getyPosition());
-        }else{
-            head.moveHorizontal(body.getxPosition()-head.getDiameter()-head.getxPosition());
-            head.moveVertical(body.getyPosition()-head.getyPosition());
+        switch(rotacion){
+            case 0:
+                head.moveHorizontal(body.getxPosition()-head.getxPosition());
+                head.moveVertical(body.getyPosition()-head.getDiameter()-head.getyPosition());
+                break;
+            case 1:
+                head.moveHorizontal(body.getxPosition()+body.getWidth()-head.getxPosition());
+                head.moveVertical(body.getyPosition()-head.getyPosition());
+                break;
+            case 2:
+                head.moveHorizontal(body.getxPosition()-head.getxPosition());
+                head.moveVertical(body.getyPosition()+body.getHeight()-head.getyPosition());
+                break;
+            default:
+                head.moveHorizontal(body.getxPosition()-head.getDiameter()-head.getxPosition());
+                head.moveVertical(body.getyPosition()-head.getyPosition());
         }
     }
     
@@ -229,26 +236,30 @@ public class Missionary{
      * reorganizar la boca y piernas del misionero
      */
     private void reorganizarPiernasBoca(){
-        if(rotacion == 0){
-            leg.moveHorizontal(body.getxPosition()-leg.getxPosition());
-            leg.moveVertical(body.getyPosition()+body.getHeight()-leg.getyPosition());
-            mouth.moveVertical(body.getyPosition()-(head.getDiameter()/3)-mouth.getyPosition());
-            mouth.moveHorizontal(body.getxPosition()+(body.getWidth()/2)-(mouth.getWidth()/2)-mouth.getxPosition());
-        }else if(rotacion == 1){
-            leg.moveHorizontal(body.getxPosition()-leg.getWidth()-leg.getxPosition());
-            leg.moveVertical(body.getyPosition()-leg.getyPosition());
-            mouth.moveVertical(body.getyPosition()+(body.getHeight()/2)-(mouth.getHeight()/2)-mouth.getyPosition());
-            mouth.moveHorizontal(body.getxPosition()+body.getWidth()+(head.getDiameter()/3)-mouth.getxPosition());
-        }else if(rotacion == 2){
-            leg.moveHorizontal(body.getxPosition()-leg.getxPosition());
-            leg.moveVertical(body.getyPosition()-leg.getHeight()-leg.getyPosition());
-            mouth.moveVertical(body.getyPosition()+body.getHeight()+(head.getDiameter()/3)-mouth.getyPosition());
-            mouth.moveHorizontal(body.getxPosition()+(body.getWidth()/2)-(mouth.getWidth()/2)-mouth.getxPosition());
-        }else{
-            leg.moveHorizontal(body.getxPosition()+body.getWidth()-leg.getxPosition());
-            leg.moveVertical(body.getyPosition()-leg.getyPosition());
-            mouth.moveVertical(body.getyPosition()+(body.getHeight()/2)-(mouth.getHeight()/2)-mouth.getyPosition());
-            mouth.moveHorizontal(body.getxPosition()-(head.getDiameter()/3)-mouth.getxPosition());
+        switch(rotacion){
+            case 0:
+                leg.moveHorizontal(body.getxPosition()-leg.getxPosition());
+                leg.moveVertical(body.getyPosition()+body.getHeight()-leg.getyPosition());
+                mouth.moveVertical(body.getyPosition()-(head.getDiameter()/3)-mouth.getyPosition());
+                mouth.moveHorizontal(body.getxPosition()+(body.getWidth()/2)-(mouth.getWidth()/2)-mouth.getxPosition());
+                break;
+            case 1:
+                leg.moveHorizontal(body.getxPosition()-leg.getWidth()-leg.getxPosition());
+                leg.moveVertical(body.getyPosition()-leg.getyPosition());
+                mouth.moveVertical(body.getyPosition()+(body.getHeight()/2)-(mouth.getHeight()/2)-mouth.getyPosition());
+                mouth.moveHorizontal(body.getxPosition()+body.getWidth()+(head.getDiameter()/3)-mouth.getxPosition());
+                break;
+            case 2:
+                leg.moveHorizontal(body.getxPosition()-leg.getxPosition());
+                leg.moveVertical(body.getyPosition()-leg.getHeight()-leg.getyPosition());
+                mouth.moveVertical(body.getyPosition()+body.getHeight()+(head.getDiameter()/3)-mouth.getyPosition());
+                mouth.moveHorizontal(body.getxPosition()+(body.getWidth()/2)-(mouth.getWidth()/2)-mouth.getxPosition());
+                break;
+            default:
+                leg.moveHorizontal(body.getxPosition()+body.getWidth()-leg.getxPosition());
+                leg.moveVertical(body.getyPosition()-leg.getyPosition());
+                mouth.moveVertical(body.getyPosition()+(body.getHeight()/2)-(mouth.getHeight()/2)-mouth.getyPosition());
+                mouth.moveHorizontal(body.getxPosition()-(head.getDiameter()/3)-mouth.getxPosition());
         }
     }
     
@@ -256,26 +267,30 @@ public class Missionary{
      * reorganizar ojos del misionero
      */
     private void reorganizarOjos(){
-        if(rotacion == 0){
-            eyeD.moveHorizontal(body.getxPosition()+3*(body.getWidth()/4)-(eyeD.getDiameter()/2)-eyeD.getxPosition());
-            eyeD.moveVertical(head.getyPosition()+(head.getDiameter()/3)-eyeD.getyPosition());
-            eyeI.moveHorizontal(body.getxPosition()+(body.getWidth()/4)-(eyeI.getDiameter()/2)-eyeI.getxPosition());
-            eyeI.moveVertical(head.getyPosition()+(head.getDiameter()/3)-eyeI.getyPosition());
-        }else if(rotacion == 1){
-            eyeD.moveHorizontal(head.getxPosition()+2*(head.getDiameter()/3)-eyeD.getxPosition());
-            eyeD.moveVertical(body.getyPosition()+3*(body.getHeight()/4)-(eyeD.getDiameter()/2)-eyeD.getyPosition());
-            eyeI.moveHorizontal(head.getxPosition()+2*(head.getDiameter()/3)-eyeI.getxPosition());
-            eyeI.moveVertical(body.getyPosition()+(body.getHeight()/4)-(eyeI.getDiameter()/2)-eyeI.getyPosition());
-        }else if(rotacion == 2){
-            eyeD.moveHorizontal(body.getxPosition()+(body.getWidth()/4)-(eyeD.getDiameter()/2)-eyeD.getxPosition());
-            eyeD.moveVertical(head.getyPosition()+2*(head.getDiameter()/3)-eyeD.getyPosition());
-            eyeI.moveHorizontal(body.getxPosition()+3*(body.getWidth()/4)-(eyeI.getDiameter()/2)-eyeI.getxPosition());
-            eyeI.moveVertical(head.getyPosition()+2*(head.getDiameter()/3)-eyeI.getyPosition());
-        }else{
-            eyeD.moveHorizontal(head.getxPosition()+(head.getDiameter()/3)-eyeD.getxPosition());
-            eyeD.moveVertical(body.getyPosition()+(body.getHeight()/4)-(eyeD.getDiameter()/2)-eyeD.getyPosition());
-            eyeI.moveHorizontal(head.getxPosition()+(head.getDiameter()/3)-eyeI.getxPosition());
-            eyeI.moveVertical(body.getyPosition()+3*(body.getHeight()/4)-(eyeI.getDiameter()/2)-eyeI.getyPosition());
+        switch(rotacion){
+            case 0:
+                eyeD.moveHorizontal(body.getxPosition()+3*(body.getWidth()/4)-(eyeD.getDiameter()/2)-eyeD.getxPosition());
+                eyeD.moveVertical(head.getyPosition()+(head.getDiameter()/3)-eyeD.getyPosition());
+                eyeI.moveHorizontal(body.getxPosition()+(body.getWidth()/4)-(eyeI.getDiameter()/2)-eyeI.getxPosition());
+                eyeI.moveVertical(head.getyPosition()+(head.getDiameter()/3)-eyeI.getyPosition());
+                break;
+            case 1:
+                eyeD.moveHorizontal(head.getxPosition()+2*(head.getDiameter()/3)-eyeD.getxPosition());
+                eyeD.moveVertical(body.getyPosition()+3*(body.getHeight()/4)-(eyeD.getDiameter()/2)-eyeD.getyPosition());
+                eyeI.moveHorizontal(head.getxPosition()+2*(head.getDiameter()/3)-eyeI.getxPosition());
+                eyeI.moveVertical(body.getyPosition()+(body.getHeight()/4)-(eyeI.getDiameter()/2)-eyeI.getyPosition());
+                break;
+            case 2:
+                eyeD.moveHorizontal(body.getxPosition()+(body.getWidth()/4)-(eyeD.getDiameter()/2)-eyeD.getxPosition());
+                eyeD.moveVertical(head.getyPosition()+2*(head.getDiameter()/3)-eyeD.getyPosition());
+                eyeI.moveHorizontal(body.getxPosition()+3*(body.getWidth()/4)-(eyeI.getDiameter()/2)-eyeI.getxPosition());
+                eyeI.moveVertical(head.getyPosition()+2*(head.getDiameter()/3)-eyeI.getyPosition());
+                break;
+            default:
+                eyeD.moveHorizontal(head.getxPosition()+(head.getDiameter()/3)-eyeD.getxPosition());
+                eyeD.moveVertical(body.getyPosition()+(body.getHeight()/4)-(eyeD.getDiameter()/2)-eyeD.getyPosition());
+                eyeI.moveHorizontal(head.getxPosition()+(head.getDiameter()/3)-eyeI.getxPosition());
+                eyeI.moveVertical(body.getyPosition()+3*(body.getHeight()/4)-(eyeI.getDiameter()/2)-eyeI.getyPosition());
         }
     }
     
