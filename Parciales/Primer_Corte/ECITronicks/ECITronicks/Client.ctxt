@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Client
+comment1.params=total
+comment1.target=void\ generateVoucher(int)
+comment1.text=\r\n\ Crea\ un\ Bono\ para\ el\ cliente\r\n\ @param\ total\:\ cantidad\ total\ a\ hacer\ un\ decuento\r\n
+numComments=2

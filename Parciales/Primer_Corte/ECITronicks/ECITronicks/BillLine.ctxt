@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=BillLine
+comment1.params=brandName\ amount
+comment1.target=boolean\ validatePurchase(java.lang.String,\ int)
+numComments=2

@@ -1,0 +1,19 @@
+
+7
+java:S1220""Move this file to a named package.8Ö¤ĞŸŞ1
+z
+java:S1450"XRemove the "interview" field and declare it as a local variable in the relevant methods.(¡îà¯ıÿÿÿÿ8Ø¤ĞŸŞ1
+J
+java:S1068"(Remove this unused "date" private field.(ÌÎ“üÿÿÿÿ8Ú¤ĞŸŞ1
+L
+java:S1068"*Remove this unused "status" private field.(‰û½ûıÿÿÿÿ8Ú¤ĞŸŞ1
+L
+java:S1068"0Remove this unused "decisionDate" private field.(·–ã*8Ú¤ĞŸŞ1
+K
+java:S1068"/Remove this unused "punctuation" private field.(³ù½8Ú¤ĞŸŞ1
+J
+java:S1068	"(Remove this unused "user" private field.(’Ø¾ıÿÿÿÿ8Ú¤ĞŸŞ1
+O
+java:S1068"-Remove this unused "interview" private field.(¡îà¯ıÿÿÿÿ8Ú¤ĞŸŞ1
+I
+java:S1068",Remove this unused "contract" private field.(ÅÅº„8Ú¤ĞŸŞ1

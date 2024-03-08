@@ -1,0 +1,29 @@
+#BlueJ class context
+comment0.target=DataMatrixCalculator
+comment0.text=\r\n\ Data\ Matrix\ Calculator\r\n\ @author\ Cardenas\ y\ Cardona\r\n
+comment1.params=
+comment1.target=DataMatrixCalculator()
+comment1.text=\r\n\ Constructor\ of\ a\ DataMatrixCalculator\ object\r\n
+comment2.params=name\ values
+comment2.target=void\ assign(java.lang.String,\ java.lang.String[][])
+comment2.text=\r\n\ Assign\ a\ matrix\ to\ a\ variable\r\n\ @param\ name\ is\ a\ String\ Variable's\ name\r\n\ @param\ values\ is\ a\ String\ matrix\ is\ the\ Variable\r\n
+comment3.params=var1\ var2
+comment3.target=boolean\ areEqual(java.lang.String,\ java.lang.String)
+comment4.params=resultVar\ var\ scalar
+comment4.target=void\ multiplyByScalar(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment5.params=
+comment5.target=java.lang.String[]\ variables()
+comment5.text=\r\n\ Consult\ the\ variables\ of\ a\ calculator\r\n\ @return\ variables\ is\ a\ String\ Arrays\ with\ all\ variable's\ name\r\n
+comment6.params=a\ unary\ b
+comment6.target=void\ assign(java.lang.String,\ char,\ java.lang.String)
+comment6.text=\r\n\ Assigns\ the\ value\ of\ an\ operation\ to\ a\ variable\ (unary\ operations)\r\n\ \ a\ \:\=\ unary\ b\r\n\ \ The\ unary\ operators\ are\:\ s\ (hape),\ t\ (ranspose)\r\n\ \ \r\n\ \ @param\ a\ is\ a\ name\ variable\ of\ the\ result\ \r\n\ \ @param\ unary\ is\ a\ char\ whith\ the\ operation\ that\ the\ method\ are\ going\ to\ do\r\n\ \ @param\ b\ is\ the\ variable\ that\ will\ chance\ with\ the\ operation\r\n
+comment7.params=a\ b\ sBinary\ c
+comment7.target=void\ assign(java.lang.String,\ java.lang.String,\ char,\ java.lang.String)
+comment7.text=\r\n\ Assigns\ the\ value\ of\ an\ operation\ to\ a\ variable\ (simple\ binary\ operations)\r\n\ \ a\ \:\=\ b\ simple\ c\r\n\ \ The\ simple\ operators\ are\:\ +,\ -\r\n\ \ \r\n\ \ @param\ a\ is\ a\ name\ variable\ of\ the\ result\ \r\n\ \ @param\ unary\ is\ a\ char\ whith\ the\ operation\ that\ the\ method\ are\ going\ to\ do\r\n\ \ @param\ b\ is\ the\ first\ operation\ variable\r\n\ \ @param\ c\ is\ the\ second\ operation\ variable\r\n
+comment8.params=variable
+comment8.target=java.lang.String\ toString(java.lang.String)
+comment8.text=\r\n\ Returns\ the\ string\ represention\ of\ a\ matrix.\ Columns\ must\ be\ aligned.\r\n\ @param\ variable\ is\ the\ variable's\ number\ of\ the\ matrix\ to\ pass\ to\ string\r\n
+comment9.params=
+comment9.target=boolean\ ok()
+comment9.text=\r\n\ If\ the\ last\ operation\ was\ successful\r\n
+numComments=10

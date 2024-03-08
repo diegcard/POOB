@@ -1,0 +1,9 @@
+
+0
+java:S1220""Move this file to a named package.
+C
+java:S1068"(Remove this unused "date" private field.(ÌÎ“üÿÿÿÿ
+J
+java:S1068"/Remove this unused "description" private field.(ÇÓæâıÿÿÿÿ
+G
+java:S1068",Remove this unused "approved" private field.(ÃËŸœıÿÿÿÿ

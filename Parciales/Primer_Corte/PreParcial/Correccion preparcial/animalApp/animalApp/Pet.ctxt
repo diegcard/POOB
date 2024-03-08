@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Pet
+comment1.params=
+comment1.target=boolean\ isAdopted()
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=java.util.ArrayList\ getFiles()
+comment4.params=sublist
+comment4.target=void\ addNewPets(java.util.List)
+numComments=5

@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=AnimalAPP
+comment1.params=userEmail
+comment1.target=java.util.List\ getNearbyPets(java.lang.String)
+comment2.params=userEmail\ petName\ date
+comment2.target=void\ scheduleInterview(java.lang.String,\ java.lang.String,\ java.time.LocalDate)
+comment2.text=\r\n\ EXERCISE\ 1\r\n\ Schedule\ the\ adoption\ interview\ for\ a\ specific\ user\ .\r\n\r\n\ @param\ userEmail\r\n\ @param\ petName\r\n\ @param\ date\r\n\ @return\r\n
+comment3.params=
+comment3.target=java.util.ArrayList\ getPetsWithOutFiles()
+comment3.text=\r\n\ EXERCISE\ 2\r\n\ get\ the\ list\ of\ all\ the\ pets\ that\ doesn't\ have\ any\ file\ associated\r\n\r\n\ @return\r\n
+comment4.params=nit
+comment4.target=boolean\ closeFoundation(java.lang.String)
+comment4.text=\r\n\ EXERCISE\ 3\r\n\ when\ a\ foundation\ close\ all\ the\ pets\ must\ be\ relocated\ in\ the\ foundations\ that\ are\ nearby\r\n\ A\ foundation\ can\ be\ considered\ close\ if\ it\ is\ in\ the\ same\ neighborhood\r\n\ when\ all\ the\ pets\ are\ relocated,\ the\ foundation\ should\ be\ deleted\ from\ animalApp\r\n\r\n\ @param\ nit\r\n
+comment5.params=availableFoundations\ foundationToClose
+comment5.target=void\ redistributePets(java.util.ArrayList,\ Foundation)
+comment5.text=\r\n\ this\ method\ redistribute\ the\ pets\ of\ a\ foundation\ in\ other\ foundations\r\n\r\n\ @param\ availableFoundations\r\n\ @param\ foundationToClose\r\n
+numComments=6

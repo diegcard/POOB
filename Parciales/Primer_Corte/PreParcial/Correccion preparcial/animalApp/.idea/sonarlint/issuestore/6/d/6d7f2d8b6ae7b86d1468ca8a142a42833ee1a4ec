@@ -1,0 +1,24 @@
+
+Q
+java:S3740&"/Provide the parametrized type for this generic.(²øŸúÿÿÿÿ8²ùª¡Ş1
+
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ª“Œ‹8ô—İŞ1
+’
+java:S1319&"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(²øŸúÿÿÿÿ8³ùª¡Ş1
+7
+java:S1220""Move this file to a named package.8õ—İŞ1
+E
+java:S1068"(Remove this unused "name" private field.(Ë¥¼8ø—İŞ1
+K
+java:S1068")Remove this unused "email" private field.(ª«Õìùÿÿÿÿ8ø—İŞ1
+J
+java:S1068"-Remove this unused "cellPhone" private field.(£ÈöÅ8ø—İŞ1
+L
+java:S1068	"*Remove this unused "active" private field.(¿‡ÚÙÿÿÿÿÿ8ø—İŞ1
+J
+java:S1068
+"-Remove this unused "birthDate" private field.(îŸ°³8ø—İŞ1
+G
+java:S1068"*Remove this unused "hasPet" private field.(ˆìÓ¡8ø—İŞ1
+P
+java:S1068".Remove this unused "references" private field.(×€¤Øûÿÿÿÿ8ø—İŞ1

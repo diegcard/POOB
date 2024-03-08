@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Voucher
+comment1.params=spend
+comment1.target=Voucher(int)
+comment2.params=
+comment2.target=int\ getValue()
+comment3.params=
+comment3.target=boolean\ getSpend()
+comment4.params=
+comment4.target=java.time.LocalDate\ getDate()
+numComments=5

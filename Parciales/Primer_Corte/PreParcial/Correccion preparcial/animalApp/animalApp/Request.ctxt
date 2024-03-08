@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Request
+comment1.params=petName\ date
+comment1.target=void\ scheduleInterview(java.lang.String,\ java.time.LocalDate)
+comment1.text=\r\n\ Create\ an\ interview\ if\ the\ pet\ is\ valid\ and\ the\ date\ is\ greater\ than\ the\ actual\ date\r\n\r\n\ @param\ petName\r\n\ @param\ date\r\n
+comment2.params=petName
+comment2.target=boolean\ validatePet(java.lang.String)
+comment2.text=\r\n\ validate\ that\ the\ pet\ name\ is\ the\ same\ that\ the\ petName\ parameter\r\n\ and\ checks\ if\ the\ pet\ is\ already\ adopted\r\n\r\n\ @param\ petName\r\n\ @return\r\n
+numComments=3

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=ECITronicks
+comment1.params=
+comment1.target=ECITronicks()
+comment2.params=brand\ initialD\ finalD\ amount\ total
+comment2.target=void\ generateVouchers(java.lang.String,\ java.time.LocalDate,\ java.time.LocalDate,\ int,\ int)
+comment2.text=\r\n\ \r\n\ Generate\ discount\ vouchers\ for\ all\ customers\ who\ have\ purchased\ products\ from\ a\ specific\ \r\n\ brand\ in\ a\ specific\ date\ range\ with\ a\ minimum\ amount.\r\n\ \r\n\ @param\:\ brand\ Name\ of\ the\ brand\ to\ whose\ products\ a\ discount\ voucher\ will\ be\ applied.\r\n\ @param\:\ initialD\:\ Initial\ purchase\ verification\ date\ for\ products\ of\ the\ specific\ brand.\r\n\ @param\:\ finalD\:\ Final\ purchase\ verification\ date\ for\ products\ of\ the\ specific\ brand.\r\n\ @param\:\ amount\:\ Minimum\ purchase\ value\ to\ grant\ the\ voucher.\r\n\ @param\:\ total\:\ Amount\ discount\ from\ Voucher.\r\n\ \r\n
+numComments=3

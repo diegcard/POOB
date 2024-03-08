@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Bill
+comment1.params=
+comment1.target=Voucher\ getVoucher()
+comment2.params=brand\ initialD\ finalID\ amount\ total
+comment2.target=void\ generateVouchers(java.lang.String,\ java.time.LocalDate,\ java.time.LocalDate,\ int,\ int)
+numComments=3

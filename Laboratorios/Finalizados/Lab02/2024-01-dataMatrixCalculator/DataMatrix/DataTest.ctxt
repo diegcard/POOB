@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=DataTest
+comment0.text=\r\n\ Unit\ test\ of\ Data\ class\r\n\ @author\ Cardenas,\ Cardona\r\n
+comment1.params=
+comment1.target=void\ shouldCreateData()
+comment1.text=\r\n\ \ \ \ @BeforeClass\r\n\ \ \ \ public\ void\ beforeClass(){\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ }\r\n\ \ \ \ \r\n\ \ \ \ @Before\r\n\ \ \ \ public\ void\ before(){\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ }\r\n
+comment2.params=
+comment2.target=void\ shouldRepresentADataAsAString()
+comment3.params=
+comment3.target=void\ shouldKnowWhenTwoBooleansAreEquals()
+comment4.params=
+comment4.target=void\ shouldKnowWhenTwoNumbersAreEquals()
+comment5.params=
+comment5.target=void\ shouldKnowWhenTwoCharactersAreEquals()
+numComments=6

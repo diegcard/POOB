@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Product
+comment1.params=
+comment1.target=java.lang.String\ getBrand()
+comment2.params=
+comment2.target=int\ getUnitPrice()
+comment3.params=brandName
+comment3.target=boolean\ isBrand(java.lang.String)
+numComments=4
