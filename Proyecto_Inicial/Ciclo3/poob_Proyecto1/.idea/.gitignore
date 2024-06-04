@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Ignore all files in the shelf directory
+/shelf/*
+
+## mics
+misc.xml
+
+#out
+/out/
+/out/*

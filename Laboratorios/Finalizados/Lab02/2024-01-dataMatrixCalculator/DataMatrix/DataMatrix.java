@@ -218,7 +218,6 @@ public class DataMatrix{
         return result;
     }
     
-    
     /**
      * Overrides the equals method to compare with another object.
      * 
@@ -229,7 +228,6 @@ public class DataMatrix{
     public boolean equals(Object other) {
             return equals((DataMatrix)other);
     }
-    
     
     /**
      * Overrides the toString method to return a string representation of the matrix.

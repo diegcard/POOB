@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81ad6666-9208-4717-b500-09b88342e0fe" name="Changes" comment="ciclo 3 con documentacion">
+      <change beforePath="$PROJECT_DIR$/bluej.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/bluej.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/shapes/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spiderweb/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/spiderweb/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/test/package.bluej" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SebastianCardona-P&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="595f078b-5f7e-4fc8-b430-2cbe4e4711ac" />
+        <option name="url" value="git@github.com:diegcard/POOB_PROYECTO01.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Spiderweb.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2dFXGw9TmsgNhlbJZCWGBdt4CpW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/usuario/Desktop/Universidad/Sexto Semestre/POOB/Proyecto 1 y 2 corte/BlueJISpiderweb/spiderweb",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.build",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BlueJISpiderweb" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BlueJISpiderweb" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81ad6666-9208-4717-b500-09b88342e0fe" name="Changes" comment="" />
+      <created>1709604709027</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709604709027</updated>
+      <workItem from="1709604710132" duration="688000" />
+      <workItem from="1709605606736" duration="143000" />
+      <workItem from="1709605771118" duration="580000" />
+      <workItem from="1709668912560" duration="480000" />
+      <workItem from="1710104857096" duration="637000" />
+      <workItem from="1710105886546" duration="57000" />
+      <workItem from="1710645459833" duration="1606000" />
+      <workItem from="1710695125343" duration="1990000" />
+      <workItem from="1710728802868" duration="1606000" />
+      <workItem from="1710730474546" duration="636000" />
+      <workItem from="1710780060556" duration="9000" />
+      <workItem from="1710786593410" duration="783000" />
+      <workItem from="1711746774153" duration="642000" />
+      <workItem from="1711750797619" duration="21939000" />
+      <workItem from="1711851926675" duration="107000" />
+      <workItem from="1712371195434" duration="94000" />
+      <workItem from="1712781065079" duration="66000" />
+    </task>
+    <task id="LOCAL-00001" summary="ciclo 3 con documentacion">
+      <option name="closed" value="true" />
+      <created>1710729459279</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710729459280</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ciclo 3 con documentacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="ciclo 3 con documentacion" />
+  </component>
+</project>

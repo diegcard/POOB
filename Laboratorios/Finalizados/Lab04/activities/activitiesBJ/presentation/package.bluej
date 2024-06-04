@@ -1,0 +1,27 @@
+#BlueJ package file
+objectbench.height=136
+objectbench.width=1347
+package.divider.horizontal=0.6
+package.divider.vertical=0.791521486643438
+package.editor.height=539
+package.editor.width=1234
+package.editor.x=0
+package.editor.y=102
+package.frame.height=788
+package.frame.width=1386
+package.numDependencies=0
+package.numTargets=1
+package.showExtends=true
+package.showUses=true
+readme.height=60
+readme.name=@README
+readme.width=49
+readme.x=10
+readme.y=10
+target1.height=70
+target1.name=ProjectManagerGUI
+target1.showInterface=false
+target1.type=ClassTarget
+target1.width=150
+target1.x=10
+target1.y=110

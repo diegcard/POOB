@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Thing
+comment0.text=\r\n\ Represents\ an\ interface\ for\ entities\ in\ the\ garden\ grid.\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Defines\ the\ action\ to\ be\ performed\ by\ the\ thing\ during\ a\ time\ step.\r\n
+comment2.params=
+comment2.target=int\ getColumn()
+comment2.text=\r\n\ Gets\ the\ column\ position\ of\ the\ entity\ in\ the\ colony\ grid.\r\n\r\n\ @return\ The\ column\ position\ of\ the\ entity.\r\n
+comment3.params=
+comment3.target=int\ getRow()
+comment3.text=\r\n\ Gets\ the\ row\ position\ of\ the\ thing\ in\ the\ garden\ grid.\r\n\r\n\ @return\ The\ row\ position\ of\ the\ thing.\r\n
+comment4.params=
+comment4.target=int\ shape()
+comment5.params=
+comment5.target=java.awt.Color\ getColor()
+comment5.text=\r\n\ Gets\ the\ color\ of\ the\ thing.\r\n\r\n\ @return\ The\ color\ of\ the\ thing,\ which\ is\ by\ default\ set\ to\ Color.blue.\r\n
+comment6.params=
+comment6.target=boolean\ is()
+comment6.text=\r\n\ Checks\ if\ the\ thing\ is\ present.\r\n\r\n\ @return\ true\ if\ the\ thing\ is\ present,\ false\ otherwise.\r\n
+numComments=7

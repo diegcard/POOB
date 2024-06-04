@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Cane
+comment0.text=\r\n\ Cane\ is\ a\ plant\ that\ moves\ towards\ the\ sand,\ It\ is\ identified\ with\ the\ color\ green.\r\n\ \r\n\ @author\ Diego\ Cardenas,\ Sebastian\ Cardona\r\n\ @version\ 1.0.0\r\n
+comment1.params=garden\ row\ column\ name
+comment1.target=Cane(Garden,\ int,\ int,\ java.lang.String)
+comment1.text=\r\n\ Create\ a\ new\ flower\ cane\ (<b>row,column</b>)\ in\ the\ garden\ <b>garden</b>.\r\n\ Every\ new\ flower\ is\ going\ to\ be\ alive\ in\ the\ following\ state.\r\n\r\n\ @param\ garden\ The\ garden\r\n\ @param\ row\ \ \ \ The\ row\r\n\ @param\ column\ The\ column\r\n\ @param\ name\ \ \ The\ name\ of\ plant\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Execute\ the\ action\r\n
+comment3.params=
+comment3.target=int[]\ findNearestSand()
+comment4.params=
+comment4.target=void\ moveToNearestSand()
+comment4.text=\r\n\ Move\ the\ carnivorous\ to\ the\ nearest\ flower\r\n
+numComments=5

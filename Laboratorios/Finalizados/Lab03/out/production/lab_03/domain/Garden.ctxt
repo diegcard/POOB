@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Garden
+comment1.params=
+comment1.target=Garden()
+comment1.text=\r\n\ Create\ a\ new\ garden\r\n
+comment2.params=
+comment2.target=int\ getLength()
+comment2.text=\r\n\ Get\ the\ length\r\n\r\n\ @return\ LENGTH\r\n
+comment3.params=r\ c
+comment3.target=Thing\ getThing(int,\ int)
+comment3.text=\r\n\ Get\ the\ thing\ in\ the\ garden.\r\n\r\n\ @param\ r\ Row\ position.\r\n\ @param\ c\ Column\ Position.\r\n\ @return\ The\ Thing\ at\ the\ specified\ position,\ or\ null\ if\ nothing\ is\ present.\r\n
+comment4.params=r\ c\ e
+comment4.target=void\ setThing(int,\ int,\ Thing)
+comment4.text=\r\n\ Set\ the\ thing\ in\ the\ garden.\r\n\r\n\ @param\ r\ The\ row\ in\ the\ Garden.\r\n\ @param\ c\ The\ column\ in\ the\ Garden.\r\n\ @param\ e\ The\ Thing\ to\ set\ at\ the\ specified\ position.\r\n
+comment5.params=
+comment5.target=void\ someThings()
+comment5.text=\r\n\ Performs\ a\ time\ step\ (tic-tac)\ for\ the\ entities\ within\ the\ garden\ grid.\r\n
+comment6.params=
+comment6.target=void\ ticTac()
+numComments=7

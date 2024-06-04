@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Sand
+comment1.params=garden\ row\ column\ name
+comment1.target=Sand(Garden,\ int,\ int,\ java.lang.String)
+comment1.text=\r\n\ Create\ a\ new\ sand\ (<b>row,column</b>)\ in\ the\ garden\ <b>garden</b>.\r\n\r\n\ @param\ garden\ The\ garden\r\n\ @param\ row\ \ \ \ The\ row\r\n\ @param\ column\ The\ column\r\n
+comment2.params=
+comment2.target=Thing[]\ getNeighbors()
+comment2.text=\r\n\ gets\ all\ Cane\ flowers\ of\ the\ sand\r\n\ \r\n\ @returns\ the\ neighbors\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Execute\ an\ action\r\n
+comment4.params=
+comment4.target=int\ getColumn()
+comment4.text=\r\n\ Returns\ the\ column\r\n\r\n\ @return\ column\r\n
+comment5.params=
+comment5.target=int\ getRow()
+comment5.text=\r\n\ Returns\ the\ row\r\n\r\n\ @return\ row\r\n
+comment6.params=
+comment6.target=java.awt.Color\ getColor()
+comment6.text=\r\n\ Returns\ the\ color\r\n\r\n\ @return\ color\r\n
+numComments=7

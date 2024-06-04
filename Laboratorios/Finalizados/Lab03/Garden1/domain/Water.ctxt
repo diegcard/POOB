@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Water
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ execute\ and\ action\r\n
+comment2.params=
+comment2.target=int\ getColumn()
+comment2.text=\r\n\ Returns\ the\ column\r\n\r\n\ @return\ column\r\n
+comment3.params=
+comment3.target=int\ getRow()
+comment3.text=\r\n\ Returns\ the\ row\r\n\r\n\ @return\ row\r\n
+numComments=4
